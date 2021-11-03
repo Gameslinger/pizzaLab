@@ -1,6 +1,6 @@
 <template>
   <div class="Design">
-	<DesignPizza :toppings="toppings" />
+	<DesignPizza :toppings="toppings"/>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   },
   data(){
 	return {
-	toppings: this.$root.$data.selectedToppings
+	toppings: this.$root.$data.toppings
 }
 },	
 }
