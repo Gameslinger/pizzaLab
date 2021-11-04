@@ -6,6 +6,9 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+    <div id="footer">
+      <a href = https://github.com/Gameslinger/pizzalab>Github</a>
+    </div>
   </div>
 </template>
 
@@ -15,7 +18,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  background:#DAF5FF;
+  font-size:30pt;
+  color:#587291;
 }
 
 #nav {
