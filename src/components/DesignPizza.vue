@@ -7,6 +7,12 @@
     </div>
     <img src="/images/pizza.png"/>
     </div>
+	<div class="toggles">
+	<div class="toggle" v-for="topping in toppings" :key="topping.id">
+		<input type="checkbox">
+		<label>{{topping.name}}: {{topping.price}}</label>	
+	</div>	
+</div>
 </div>
 </template>
 
