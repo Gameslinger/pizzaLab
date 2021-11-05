@@ -10,7 +10,7 @@
 	<div class="toggles">
 	<div class="toggle" v-for="topping in toppings" :key="topping.id">
 		<input @change="toggle(topping.id)" type="checkbox">
-		<label>{{topping.name}}: {{topping.price}}</label>	
+		<label>{{topping.name}}: {{"$"+topping.price.toFixed(2)}}</label>	
 	</div>	
 </div>
 </div>
