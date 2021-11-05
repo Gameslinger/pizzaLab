@@ -3,7 +3,7 @@
 <h1>Make your own Pizza!</h1>
 <div class="toppings">
     <div class="topping" v-for="topping in toppings" :key="topping.id">
-	<img style="display:none" :id="'topping'+topping.id" :src="'/images/toppings/'+topping.image"/>
+	<img :style="'display:'+(isChecked(topping.id) ? 'block' : 'none')" :id="'topping'+topping.id" :src="'/images/toppings/'+topping.image"/>
     </div>
     <img src="/images/pizza.png"/>
     </div>
