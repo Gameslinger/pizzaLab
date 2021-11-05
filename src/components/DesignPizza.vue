@@ -9,7 +9,7 @@
     </div>
 	<div class="toggles">
 	<div class="toggle" v-for="topping in toppings" :key="topping.id">
-		<input @change="toggle(topping.id)" type="checkbox">
+		<input @change="toggle(topping.id)" type="checkbox" :checked="isChecked(topping.id)">
 		<label>{{topping.name}}: {{"$"+topping.price.toFixed(2)}}</label>	
 	</div>	
 </div>
@@ -32,6 +32,14 @@ document.getElementById(eId).style.display = "block";
 		this.$root.$data.selectedToppings = this.$root.$data.selectedToppings.filter((elem) => elem.id !== id)
 document.getElementById(eId).style.display = "none";
 }
+},
+isChecked(id){
+	let found=false;
+	this.$root.$data.selectedToppings.forEach((elem)=>{
+		if(elem.id === id)
+			found = true;	
+})	
+return found
 }
 }
 }
