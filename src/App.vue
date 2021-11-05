@@ -5,9 +5,10 @@
       <router-link to="/design">Design Pizza</router-link> |
       <router-link to="/cart">Cart</router-link>
     </div>
-    <router-view/>
+    <img alt = "Tastee Pizza" src = '../public/images/logo.png'/>
+    <router-view class = "router"/>
     <div id="footer">
-      <a href = https://github.com/Gameslinger/pizzalab>Github</a>
+      <a href = 'https://github.com/Gameslinger/pizzalab'>Github</a>
     </div>
   </div>
 </template>
@@ -21,8 +22,18 @@
   background:#DAF5FF;
   font-size:30pt;
   color:#587291;
+  height: 100vh;
 }
-
+.router {
+background:#DAF5FF;
+}
+#footer {
+  background:#DAF5FF;
+  padding:30pt;
+}
+#footer a {
+  color: #59788a;
+}
 #nav {
   padding: 30px;
 }
