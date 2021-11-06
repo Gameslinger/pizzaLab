@@ -3,6 +3,7 @@
 <h2>Checkout</h2>
 <h3>Subtotals:</h3>
 <div class="subtotals">
+<span>+$10:00: Medium Pizza</span>
 <div class="subtotal" v-for="topping in toppings" :key="topping.id">
 <span>+${{topping.price.toFixed(2)}}: {{topping.name}}</span>
 </div>
