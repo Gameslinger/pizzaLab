@@ -1,17 +1,19 @@
 <template>
 <div>
-<h1>Make your own Pizza!</h1>
+<h1 id="header">Make your own Pizza!</h1>
+<div id="container">
 <div class="toppings">
     <div class="topping" v-for="topping in toppings" :key="topping.id">
 	<img :style="'display:'+(isChecked(topping.id) ? 'block' : 'none')" :id="'topping'+topping.id" :src="'/images/toppings/'+topping.image"/>
     </div>
-    <img src="/images/pizza.png"/>
+    <img id="pizza" src="/images/pizza.png"/>
     </div>
 	<div class="toggles">
 	<div class="toggle" v-for="topping in toppings" :key="topping.id">
 		<input @change="toggle(topping.id)" type="checkbox" :checked="isChecked(topping.id)">
 		<label>{{topping.name}}: {{"$"+topping.price.toFixed(2)}}</label>	
 	</div>	
+</div>
 </div>
 </div>
 </template>
@@ -51,8 +53,30 @@ display:flex;
 justify-content:center;
 }
 
+#container {
+display: flex;
+flex-direction:row;
+justify-content: center; 
+align-items: center;
+}
 .topping img {
 position: absolute;
+}
+.topping img, #pizza {
+width: 40vw;
+}
+.toggles {
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+margin-left: 0.5em;
+margin-left: 1em;
+}
 
+.toggle label {
+font-size: 4vw;
+}
+#header {
+font-size: 8vw;
 }
 </style>
